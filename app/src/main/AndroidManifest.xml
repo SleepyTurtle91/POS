@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.borneopos.app">
+
+    <application
+        android:name=".BorneoApp"
+        android:allowBackup="true"
+        android:label="BorneoPOS"
+        android:icon="@mipmap/ic_launcher">
+        <!-- Activities go here -->
+    </application>
+</manifest>
