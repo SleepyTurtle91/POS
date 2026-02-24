@@ -127,9 +127,11 @@ The app uses **Room** for local persistence. The `data` module provides:
 - `ProductEntity` and `TransactionEntity` entities with `@Entity` annotations.
 - `ProductDao` and `TransactionDao` with query methods.
 - `BorneoDatabase` (`@Database`) exposing DAOs.
-- `DatabaseModule` Hilt provider for injecting the database and DAOs.
+- `DatabaseModule` Hilt provider for injecting the database and DAOs.  The provider also performs an initial seed when the database is created (a small catalog of sample products).
 
 Repository implementations in `data/repository` bridge the DAOs to the domain layer.
+
+A helper use‑case (`SeedDatabaseUseCase`) is also available in the domain layer for programmatic seeding if you prefer to populate data via business logic instead of the provider callback.
 
 To initialize or inspect the database:
 
